@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Señales Discretas - Generador de Señales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/continuous_signals.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="continuous_signals_container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">Generador de Señales</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Overview</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('introduction') }}"><span class="nav-icon">&#9733;</span>Introducción</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Utilidades</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('continuous_signals') }}"><span class="nav-icon">&#9473;</span>Señales Continuas</a></li>
+                        <li><a href="{{ url_for('discrete_signals') }}"><span class="nav-icon">&#9888;</span>Señales Discretas</a></li>
+                        <li><a href="{{ url_for('signal_sums') }}"><span class="nav-icon">&#10133;</span>Sumas de Señales</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Extra</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('credits') }}"><span class="nav-icon">&#9432;</span>Créditos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Señales Discretas</h1>
+            <div class="graphs-container">
+                <div class="graph-wrapper">
+                    <h2>Señal Discreta 1</h2>
+                    <div id="plotly-graph-1" class="signal-graph"></div>
+                    <div class="button-group">
+                        <button class="graph-button" onclick="location.href='/discrete-signals/first-signal/first-method'">Transformar usando método 1</button>
+                        <button class="graph-button" onclick="location.href='/discrete-signals/first-signal/second-method'">Transformar usando método 2</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const graph = {{ graphJSON | safe }};
+                Plotly.newPlot('plotly-graph-1', graph, graph);
+            </script>
+        </main>
+    </div>
+</body>
+</html>

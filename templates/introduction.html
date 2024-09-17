@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción - Generador de Señales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">Generador de Señales</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Overview</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('introduction') }}"><span class="nav-icon">&#9733;</span>Introducción</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Utilidades</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('continuous_signals') }}"><span class="nav-icon">&#9473;</span>Señales Continuas</a></li>
+                        <li><a href="{{ url_for('discrete_signals') }}"><span class="nav-icon">&#9888;</span>Señales Discretas</a></li>
+                        <li><a href="{{ url_for('signal_sums') }}"><span class="nav-icon">&#10133;</span>Sumas de Señales</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Extra</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('credits') }}"><span class="nav-icon">&#9432;</span>Créditos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        </aside>
+        <main class="main-content">
+            <h1 class="page-title">Introducción a las Señales</h1>
+            <div class="content-card">
+                <p class="intro-text">Las señales son funciones matemáticas que representan información o datos en función del tiempo u otras variables. En el ámbito de procesamiento de señales, existen dos tipos principales:</p>
+                <div class="signal-types">
+                    <div class="signal-type">
+                        <h2>Señales continuas</h2>
+                        <p>Son aquellas que tienen valores para cada instante de tiempo dentro de un intervalo continuo. Son útiles para modelar fenómenos físicos como el sonido o la temperatura.</p>
+                    </div>
+                    <div class="signal-type">
+                        <h2>Señales discretas</h2>
+                        <p>Estas señales solo tienen valores en puntos específicos del tiempo. Son ideales para el procesamiento digital, como el que ocurre en computadoras y dispositivos electrónicos.</p>
+                    </div>
+                </div>
+                <div class="signal-operations">
+                    <h2>Operaciones con Señales</h2>
+                    <p>Además de clasificarse en continuas o discretas, las señales se pueden modificar a través de diversas operaciones, como:</p>
+                    <ul>
+                        <li><strong>Desplazamiento:</strong> Cambia su posición en el tiempo.</li>
+                        <li><strong>Escalamiento:</strong> Altera su amplitud o velocidad.</li>
+                    </ul>
+                    <p>Estas transformaciones son esenciales para el análisis y procesamiento eficiente de señales en aplicaciones del mundo real.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

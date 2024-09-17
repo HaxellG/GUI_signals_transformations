@@ -1,0 +1,145 @@
+/* Styles specific to the discrete signals page */
+.discrete_signals_container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f5f0e8;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.graphs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.graph-wrapper {
+    background-color: #fdfaf6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.graph-wrapper h2 {
+    color: #3c2f2f;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.signal-graph {
+    width: 96%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.small-signal-graph {
+    width: 96%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-size: 1em;
+    color: #3c2f2f;
+    margin-bottom: 5px;
+}
+
+.input-wrapper input {
+    padding: 10px;
+    border: 1px solid #8c6239;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #3c2f2f;
+    background-color: #f5f0e8;
+}
+
+.input-wrapper input::placeholder {
+    color: #a89385;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #755133;
+    box-shadow: 0 0 0 2px rgba(140, 98, 57, 0.2);
+}
+
+/* Add this to your existing CSS */
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8c6239;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #755133;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .discrete_signals_container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .signal-graph {
+        height: 300px;
+    }
+
+    .small-signal-graph {
+        height: 300px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+
+    .input-wrapper {
+        margin-bottom: 15px;
+    }
+}

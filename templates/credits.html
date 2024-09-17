@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos - Generador de Señales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/credits.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="sidebar-logo">
+                <h2 class="sidebar-title">Generador de Señales</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Overview</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('introduction') }}"><span class="nav-icon">&#9733;</span>Introducción</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Utilidades</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('continuous_signals') }}"><span class="nav-icon">&#9473;</span>Señales Continuas</a></li>
+                        <li><a href="{{ url_for('discrete_signals') }}"><span class="nav-icon">&#9888;</span>Señales Discretas</a></li>
+                        <li><a href="{{ url_for('signal_sums') }}"><span class="nav-icon">&#10133;</span>Sumas de Señales</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Extra</h3>
+                    <ul class="nav-list">
+                        <li><a href="{{ url_for('credits') }}"><span class="nav-icon">&#9432;</span>Créditos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="page-title">Créditos</h1>
+            <div class="credits-container">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo del Proyecto" class="credits-logo">
+                <h2 class="project-title">Generador de Señales</h2>
+                <p class="project-description">
+                    Este proyecto fue creado como parte del curso de Señales y Sistemas, específicamente para el Laboratorio 1 titulado "Transformación de Señales".
+                </p>
+                <div class="credits-grid">
+                    <div class="credits-section">
+                        <h3>Desarrollado por</h3>
+                        <ul>
+                            <li>Emmanuel Cabrera</li>
+                            <li>Haxell Gómez</li>
+                            <li>Nikolas Pedraza</li>
+                        </ul>
+                    </div>
+                    <div class="credits-section">
+                        <h3>Supervisado por</h3>
+                        <p>Juan Pablo Tello</p>
+                        <p>PhD</p>
+                    </div>
+                    <div class="credits-section">
+                        <h3>Universidad</h3>
+                        <p>Universidad del Norte</p>
+                    </div>
+                    <div class="credits-section">
+                        <h3>Año Académico</h3>
+                        <p>2024-03</p>
+                    </div>
+                    <div class="credits-section tech-section">
+                        <h3>Tecnologías Utilizadas</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Flask</span>
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                            <span class="tech-item">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">© 2023 Generador de Señales. Todos los derechos reservados.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
