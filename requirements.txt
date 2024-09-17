@@ -1,4 +1,4 @@
-Flask
-numpy
-plotly
-scipy
+Flask==2.3.3
+numpy==1.21.0  # o una versión optimizada para serverless
+plotly==5.3.1
+scipy==1.7.0
